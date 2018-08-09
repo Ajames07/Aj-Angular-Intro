@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="server/public/styles/styles.css">
+    <script src="server/public/vendors/angular.min.js"></script>
+    <script src="server/public/scripts/client.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app="myApp"> 
+    <h1>list of treats</h1>
+    <div ng-controller="FoodController as mc">
+        Some random food: <input type="text" placeholder="someFood" ng-model="mc.foodIn">
+        <button ng-click="mc.addSomeFood()">add food</button>
+        <p ng-repeat="edibles in mc.someFood">{{edibles}}</p>
+        <p>{{mc.someFood}}</p>
+    </div>
+
+</body>
+</html>
